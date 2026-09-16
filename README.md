@@ -17,6 +17,7 @@ si lavora dentro questo repository.
 | --- | --- | --- |
 | [`esempi/studio-commercialista/`](esempi/studio-commercialista/) | `hallmark` | Landing page di uno studio commercialista. Marquee Hero + tema Grid. Contenuti fittizi. |
 | [`esempi/studio-commercialista-redesign/`](esempi/studio-commercialista-redesign/) | `hallmark redesign` | Stesso contenuto, Long Document + tema Atelier. Serve a misurare quanta varietà strutturale produce la skill. |
+| [`esempi/studio-mb/`](esempi/studio-mb/) | `hallmark` | Bozza del sito di Studio M.B. Srl (San Paolo, BS). Split Studio + tema custom bordeaux, con segnaposto fotografici ed elenco degli scatti per il fotografo. |
 
 `.hallmark/log.json` è la memoria di progetto della skill: registra macrostruttura
 e tema di ogni build, così la successiva ne sceglie di diversi.

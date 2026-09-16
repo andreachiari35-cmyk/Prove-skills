@@ -1,0 +1,75 @@
+/* Hallmark · tokens — Studio M.B. Srl
+ * theme: custom (tuned) · vibe: "bordeaux sobrio, bianchi caldi, legno chiaro"
+ * axes: light / roman-serif / warm (bordeaux ~18°)
+ * Ogni colore e ogni font della pagina passa da qui: styles.css non contiene
+ * nessun valore cromatico o tipografico inline.
+ */
+
+:root {
+  /* ---- Tipografia -------------------------------------------------- */
+  --font-display:  "Newsreader", ui-serif, Georgia, serif;          /* titoli */
+  --font-body:     "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-wordmark: "Big Shoulders Display", "IBM Plex Sans", sans-serif; /* solo logo: rail + footer */
+
+  /* Scala 1.25 (terza maggiore), base 16px */
+  --text-xs:   0.64rem;
+  --text-sm:   0.8rem;
+  --text-base: 1rem;
+  --text-md:   1.25rem;
+  --text-lg:   1.5625rem;
+  --text-xl:   1.9531rem;
+  --text-2xl:  2.4414rem;
+  --text-3xl:  3.0518rem;
+  --text-display:   clamp(2.75rem, 5vw + 1rem, 5.25rem);
+  --text-display-s: clamp(2.25rem, 3.4vw + 1rem, 3.5rem);
+  /* L'apertura sta in mezza pagina: il titolo è tarato per restare su una riga. */
+  --text-display-hero: clamp(2.5rem, 4vw + 0.5rem, 4.25rem);
+
+  /* ---- Colore (OKLCH, ancoraggio bordeaux hue 18) ------------------- */
+  --color-paper:    oklch(97.2% 0.006 55);   /* bianco caldo */
+  --color-paper-2:  oklch(94.6% 0.008 55);   /* pannello */
+  --color-paper-3:  oklch(91.5% 0.010 60);   /* fondo sezione */
+  --color-wood:     oklch(86%   0.028 72);   /* tocco di legno chiaro */
+  --color-slot:     oklch(88.5% 0.007 60);   /* riquadri foto */
+  --color-ink:      oklch(21%   0.014 35);
+  --color-ink-2:    oklch(34%   0.012 35);
+  --color-muted:    oklch(50%   0.010 40);
+  --color-rule:     oklch(84%   0.008 50);
+  --color-rule-2:   oklch(90%   0.006 50);
+  --color-accent:   oklch(41%   0.125 18);   /* bordeaux dello studio */
+  --color-accent-2: oklch(34%   0.115 18);   /* bordeaux premuto */
+  --color-accent-ink: oklch(97.5% 0.008 55); /* testo su bordeaux */
+  --color-focus:    oklch(45%   0.180 18);
+
+  /* ---- Spazio (scala 4pt) ------------------------------------------ */
+  --space-3xs: 0.125rem;
+  --space-2xs: 0.25rem;
+  --space-xs:  0.5rem;
+  --space-sm:  0.75rem;
+  --space-md:  1rem;
+  --space-lg:  1.5rem;
+  --space-xl:  2.5rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  --space-4xl: 9rem;
+
+  /* ---- Tratti e raggi ---------------------------------------------- */
+  --rule-hair: 1px;
+  --rule-thick: 2px;
+  --radius-none: 0;
+  --radius-sm: 2px;
+
+  /* ---- Movimento ---------------------------------------------------- */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in:     cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms;
+  --dur-short: 220ms;
+  --dur-long:  420ms;
+
+  /* ---- Livelli ------------------------------------------------------ */
+  --z-base: 1;
+  --z-raised: 10;
+  --z-sticky: 200;       /* elementi appiccicati dentro la pagina */
+  --z-sticky-nav: 300;   /* la barra in alto vince sempre */
+}

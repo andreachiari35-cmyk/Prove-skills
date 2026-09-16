@@ -1,6 +1,19 @@
 [
   {
     "date": "2026-09-16",
+    "macrostructure": "Split Studio",
+    "theme": "custom",
+    "theme_axes": "light / roman-serif / warm (bordeaux ~18°)",
+    "vibe": "bordeaux sobrio, bianchi caldi, legno chiaro",
+    "genre": "editorial",
+    "nav": "N3 Side-rail",
+    "footer": "Ft2 Inline single line",
+    "enrichment": "none",
+    "brief": "Studio M.B. Srl, San Paolo (BS) — bozza statica per il cliente, con segnaposto per gli scatti del fotografo",
+    "path": "esempi/studio-mb/"
+  },
+  {
+    "date": "2026-09-16",
     "verb": "redesign",
     "macrostructure": "Long Document",
     "theme": "Atelier",
