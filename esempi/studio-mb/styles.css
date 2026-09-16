@@ -157,6 +157,7 @@ a { color: inherit; }
 }
 .wordmark__studio {
   writing-mode: vertical-rl;
+  transform: rotate(180deg);   /* come sul vetro: si legge dal basso */
   font-size: var(--text-xs);
   font-weight: 600;
   letter-spacing: 0.28em;
@@ -363,10 +364,11 @@ a { color: inherit; }
 
 /* Impilati, i formati verticali occuperebbero due schermate: qui restano misurati. */
 .areas__shot, .about__shot { max-width: 22rem; }
+.about__shot.photo { max-width: 24rem; }
 
 @media (min-width: 60rem) {
   .areas__body { grid-template-columns: minmax(0, 8fr) minmax(0, 4fr); gap: var(--space-2xl); align-items: start; }
-  .areas__shot, .about__shot { max-width: none; }
+  .areas__shot, .about__shot, .about__shot.photo { max-width: none; }
   .areas__shot { position: sticky; top: var(--bar-h); z-index: var(--z-base); }
   .sheet__row { grid-template-columns: 4rem minmax(0, 1fr); padding-block: var(--space-xl); }
 }
@@ -530,6 +532,18 @@ a { color: inherit; }
 @media (min-width: 60rem) {
   .contact { grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); gap: var(--space-2xl); align-items: start; }
   .contact__media { gap: var(--space-lg); }
+}
+
+/* --------------------------------------------------- foto definitive */
+.photo { display: grid; min-width: 0; }
+.photo__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: 50% 22%;   /* tiene la testa alta nel taglio */
+  background: var(--color-slot);
 }
 
 /* ------------------------------------------- segnaposto fotografici */

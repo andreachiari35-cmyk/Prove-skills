@@ -14,6 +14,7 @@ JavaScript, non c'è un backend, il modulo di prenotazione non esiste ancora.
 | `index.html` | La pagina: header, apertura, aree di competenza, chi siamo, lo studio, contatti, footer. |
 | `tokens.css` | Colori, tipografia, spaziature, tempi. Ogni valore della pagina passa da qui. |
 | `styles.css` | Il layout. Nessun colore e nessun font scritti a mano: solo `var(--…)`. |
+| `foto/` | Le foto definitive. Per ora contiene il solo ritratto del titolare. |
 
 Si apre facendo doppio clic su `index.html`: non serve installare niente. I font
 (Newsreader, IBM Plex Sans, Big Shoulders Display) arrivano da Google Fonts, quindi
@@ -34,6 +35,21 @@ dominio dello studio, così il sito non dipende da un terzo.
 - **Logo**: «MB» con «STUDIO» in verticale è un **segnaposto di testo**. Va
   sostituito con il file originale quando arriva.
 
+## Il ritratto del titolare
+
+La foto di Mario Monteverdi davanti alla porta a vetri è già in pagina, tagliata
+in 4 : 5 con il volto tenuto alto nell'inquadratura. Il file pesa 144 kB.
+
+Due cose notate guardandola, da confermare con lo studio:
+
+- Il logo sul vetro è **grigio scuro**, non bordeaux, e porta accanto la dicitura
+  «Consulenza Fiscale e Societaria». Il segnaposto testuale del sito ora ricalca
+  la disposizione giusta — «MB» con «STUDIO» in verticale che si legge dal basso
+  — ma resta da decidere se il bordeaux vada al marchio o solo agli accenti della
+  pagina, come adesso.
+- Se la foto ritrae persone diverse dal titolare negli altri scatti, serve la
+  loro liberatoria prima della pubblicazione.
+
 ## Cosa manca e va confermato dal cliente
 
 I dati non forniti sono segnaposto in maiuscolo dentro parentesi quadre, così si
@@ -52,15 +68,15 @@ statica con il link alle indicazioni stradali.
 
 # Elenco degli scatti per il fotografo
 
-Nove scatti. Nella pagina ogni riquadro grigio riporta già, scritto dentro, cosa
-deve contenere e in che proporzioni. Da evitare ovunque: strette di mano,
+Nove scatti, di cui uno già in pagina (il numero 3). Nella pagina ogni riquadro
+grigio riporta già, scritto dentro, cosa deve contenere e in che proporzioni. Da evitare ovunque: strette di mano,
 calcolatrici in primo piano, grafici finti, sorrisi da foto stock.
 
 | # | Sezione | Orientamento | Proporzioni | Cosa inquadrare |
 | --- | --- | --- | --- | --- |
 | 1 | Apertura | Orizzontale | 16 : 9 | Reception: bancone curvo con piano in vetro, luce naturale, ambiente ordinato. È la prima immagine del sito: nessun cavo, nessuna carta in vista. |
 | 2 | Aree di competenza | Verticale | 3 : 4 | Targa bordeaux con i servizi in scritte bianche. Frontale, ritaglio stretto sul testo. |
-| 3 | Chi siamo | Verticale | 4 : 5 | Ritratto di Mario Monteverdi in studio: luce morbida, espressione aperta, logo sfocato sullo sfondo. Mezzobusto. |
+| 3 | Chi siamo | Verticale | 4 : 5 | **Già fornito dal cliente e montato in pagina** (`foto/ritratto-titolare.jpg`). Da rifare solo se si vuole uniformare la luce agli altri scatti. |
 | 4 | Lo studio | Orizzontale | 3 : 2 | Logo MB sulla porta a vetri, ripreso frontalmente, con l’ambiente dietro leggermente fuori fuoco. |
 | 5 | Lo studio | Orizzontale | 3 : 2 | Ufficio operativo: postazione di lavoro con parquet e parete bianca, inquadratura pulita. |
 | 6 | Lo studio | Orizzontale | 3 : 2 | Sala riunioni: tavolo vuoto e in ordine, quadro astratto rosso nell’inquadratura, luce naturale laterale. |
