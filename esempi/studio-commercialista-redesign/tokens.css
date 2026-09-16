@@ -1,0 +1,70 @@
+/* Hallmark · tokens · genre: editorial · theme: Atelier (quiet classical)
+ * Paper band: light (warm off-white) · Display: classical-serif · Accent: oxblood (warm)
+ * Two axes out of three move away from the Grid build this page was redesigned from:
+ * display style (classical-serif, not grotesk-heavy) and accent hue (warm, not cool).
+ */
+
+:root {
+  /* ---- Paper, ink, rules ------------------------------------------------ */
+  --color-paper:      oklch(97%   0.010 75);
+  --color-paper-2:    oklch(94.5% 0.012 75);
+  --color-rule:       oklch(84%   0.012 70);
+  --color-muted:      oklch(44%   0.012 60);
+  --color-ink:        oklch(20%   0.014 55);
+
+  /* ---- One accent, spent on the drop cap, the links and the focus ring --- */
+  --color-accent:     oklch(40%   0.105 28);   /* oxblood — warm, unshouted */
+  --color-accent-ink: oklch(97%   0.010 75);
+  --color-focus:      oklch(40%   0.105 28);
+
+  /* ---- Type: a pairing, where the Grid build ran one family -------------- */
+  --font-display: "EB Garamond", "EB Garamond Fallback", Georgia, serif;
+  --font-body:    "IBM Plex Sans", "IBM Plex Sans Fallback", system-ui, sans-serif;
+
+  --text-xs:   0.75rem;
+  --text-sm:   0.875rem;
+  --text-base: 1.0625rem;    /* 17px — this page is meant to be read, not scanned */
+  --text-md:   1.25rem;
+  --text-lg:   1.5625rem;
+  --text-xl:   1.9531rem;
+  --text-2xl:  2.4414rem;
+  --text-display: clamp(2rem, 3vw + 1rem, 3.0518rem);
+
+  --lh-display: 1.14;
+  --lh-body:    1.68;        /* Long Document asks for 1.65+ */
+  --tracking-smallcaps: 0.07em;
+
+  /* ---- Space (4pt scale) ------------------------------------------------ */
+  --space-3xs: 0.125rem;
+  --space-2xs: 0.25rem;
+  --space-xs:  0.5rem;
+  --space-sm:  0.75rem;
+  --space-md:  1rem;
+  --space-lg:  1.5rem;
+  --space-xl:  2.5rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  --space-4xl: 9rem;
+
+  /* ---- Shell ------------------------------------------------------------ */
+  --measure:      62ch;      /* the prose column */
+  --margin-col:   21ch;      /* the marginalia column beside it */
+  --shell:        90ch;
+  --page-gutter:  clamp(1rem, 5vw, 3rem);
+
+  /* ---- Rules, radii ------------------------------------------------------ */
+  --rule-hair: 1px;
+  --rule-ink:  2px;
+  --radius-card: 0;
+  --shadow-card: none;
+
+  /* ---- Motion: almost none. The document is simply there. ---------------- */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in:     cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms;
+  --dur-short: 200ms;
+  --dur-long:  420ms;
+
+  --z-base: 1;
+}
