@@ -1,0 +1,28 @@
+[
+  {
+    "date": "2026-09-16",
+    "verb": "redesign",
+    "macrostructure": "Long Document",
+    "theme": "Atelier",
+    "theme_axes": "light / classical-serif / warm (oxblood)",
+    "genre": "editorial",
+    "nav": "N6 Newspaper masthead",
+    "footer": "Ft1 Mast-headed",
+    "enrichment": "none",
+    "brief": "Redesign di esempi/studio-commercialista/ — stesso contenuto, impronta strutturale diversa",
+    "path": "esempi/studio-commercialista-redesign/",
+    "redesigned_from": "esempi/studio-commercialista/"
+  },
+  {
+    "date": "2026-09-16",
+    "macrostructure": "Marquee Hero",
+    "theme": "Grid",
+    "theme_axes": "light / grotesk-heavy-lowercase / cool (ultramarine)",
+    "genre": "editorial",
+    "nav": "N9 Edge-aligned minimal",
+    "footer": "Ft4 Dense colophon",
+    "enrichment": "none",
+    "brief": "Ravasi Benedetti · studio commercialista, Milano — serio, elegante, moderno, sofisticato, non giocoso",
+    "path": "esempi/studio-commercialista/"
+  }
+]
