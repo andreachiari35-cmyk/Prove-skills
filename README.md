@@ -16,7 +16,8 @@ commit `5bf4e78` dell'upstream; la licenza è in
 `.claude/skills/brainstorming/LICENSE.superpowers`.
 
 `CLAUDE.md` impone l'ordine per il web development: prima l'intervista di
-`brainstorming`, poi `hallmark` per la parte visiva.
+`brainstorming`, poi `hallmark`, `impeccable` e il connettore Originkit per la
+parte visiva.
 
 ## Esempi
 

@@ -17,17 +17,26 @@ semplice:
 
 Rispondi e fai le domande in italiano.
 
-## Rapporto con `hallmark`
+## Rapporto con gli strumenti di design
 
-`hallmark` resta la skill per la parte visiva, ma viene **dopo** l'intervista:
+Per la parte visiva ho tre strumenti, e tutti vengono **dopo** l'intervista:
 
-- Le risposte dell'intervista (pubblico, uso, tono) valgono come brief di
-  `hallmark`, quindi non ripetere le sue domande se ho già risposto.
-- Tema e macrostruttura scelti con `hallmark` entrano nel design che mi presenti
-  per l'approvazione.
-- Dopo l'approvazione, per il codice visivo applica le regole di `hallmark`.
-  Questa istruzione prevale sulla regola di `brainstorming` che vieta di
-  invocare skill diverse da `writing-plans`.
+| Strumento | Tipo | Quando usarlo |
+| --- | --- | --- |
+| `hallmark` | skill (in questo repo) | Direzione visiva di pagine nuove o redesign: macrostruttura, tema, tipografia. |
+| `impeccable` | skill | Qualità del design e rifinitura: regole di stile e revisione dell'interfaccia. |
+| Originkit | connettore MCP (`mcp__Originkit__*`) | Componenti pronti (hero, navbar, pricing, card, form, animazioni) per React, Next.js, Vite o Framer. |
+
+- Le risposte dell'intervista (pubblico, uso, tono, stack) valgono come brief
+  per tutti e tre, quindi non ripetere le loro domande se ho già risposto.
+- Nel design che mi presenti per l'approvazione indica quale strumento usi per
+  ogni parte: tema e struttura da `hallmark`, componenti da Originkit (cercali
+  con `search` e cita quali), controlli di qualità da `impeccable`.
+- Dopo l'approvazione, implementa con quegli strumenti. Questa istruzione
+  prevale sulla regola di `brainstorming` che vieta di invocare skill diverse
+  da `writing-plans`.
+- Se uno strumento non è disponibile nella sessione, dillo e prosegui con gli
+  altri.
 
 Salta l'intervista solo se te lo chiedo esplicitamente ("vai", "niente
 domande", "fai tu").
