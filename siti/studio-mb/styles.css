@@ -15,6 +15,7 @@
  * footer: Ft2 Inline single line (order=wordmark/credit/links, separator=filo verticale, density=spaced)
  * H2 Split-diptych knobs: ratio=6/6, right=foto al vivo sul bordo, divider=spazio negativo
  * F3 Spec-sheet knobs: columns=2 (numero / nome+descrizione), rules=ogni riga, numbers=tabular
+ *   groups=4 (ambiti, filo accento spesso in apertura), rows=12 numerate di seguito, elenchi=trattino appeso
  * F1 Bento knobs: tiles=5, spans=irregular, border=hairline
  * C1 Outlined-chip knobs: shape=rectangular, density=spacious, adornment=none
  * S2 Hanging knobs: colonna singola, nessun filo, nessun occhiello
@@ -28,6 +29,9 @@
  *   accento: gate 23 pass da 375 px in su (3,1–4,8%), 6,3% a 320 px — vedi sopra
  *   mobile: pass (34, 49, 50–57) · onestà: pass (46) · chrome: pass (47)
  *   token: pass (48) · icone: pass (30) · nav+footer+hero: pass (42–45)
+ *
+ * 2026-09-27 · servizi riscritti sul testo del cliente (I_NOSTRI_SERVIZI_STUDIO_MB.docx):
+ *   ricontrollati overflow e testo cliccabile a 320 / 375 / 414 / 768 / 1024 / 1440.
  */
 
 /* ---------------------------------------------------------------- base */
@@ -48,7 +52,7 @@ body {
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-family: var(--font-display);
   font-style: normal;
   margin: 0;
@@ -361,6 +365,44 @@ a { color: inherit; }
   max-width: 58ch;
   color: var(--color-ink-2);
 }
+
+/* Elenchi dentro la riga: rientro appeso, il trattino bordeaux fa da segno di
+ * registro. Il testo alternativo vuoto lo tiene fuori dagli screen reader. */
+.sheet__points {
+  display: grid;
+  gap: var(--space-2xs);
+  margin-top: var(--space-sm);
+  max-width: 58ch;
+  color: var(--color-ink-2);
+}
+.sheet__points li {
+  display: grid;
+  grid-template-columns: 1.25rem minmax(0, 1fr);
+}
+.sheet__points li::before {
+  content: "\2013";
+  content: "\2013" / "";
+  color: var(--color-accent);
+}
+
+/* Quattro ambiti. Il filo bordeaux spesso apre il gruppo, i fili sottili
+ * separano le righe: due pesi, così il registro si legge senza occhielli. */
+.areas__main { display: grid; gap: var(--space-2xl); min-width: 0; }
+.group { min-width: 0; }
+.group__title {
+  padding-top: var(--space-md);
+  border-top: var(--rule-thick) solid var(--color-accent);
+  font-size: var(--text-xl);
+  font-weight: 300;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+}
+.group__note {
+  margin-top: var(--space-xs);
+  max-width: 52ch;
+  color: var(--color-muted);
+}
+.group .sheet { margin-top: var(--space-lg); }
 
 /* Impilati, i formati verticali occuperebbero due schermate: qui restano misurati. */
 .areas__shot, .about__shot { max-width: 22rem; }

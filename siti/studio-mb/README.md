@@ -11,7 +11,7 @@ Artifact pubblicato: https://claude.ai/artifact/RwfSNP1vfvHfEgi8UC46nc
 | --- | --- |
 | Nav | N3 rail laterale (diventa barra in alto sotto i 68rem) |
 | Apertura | Diptych testo/foto, foto al vivo sul bordo destro |
-| Servizi | F3 prospetto tabellare, cinque aree numerate |
+| Servizi | F3 prospetto tabellare: dodici servizi numerati in quattro ambiti (impresa, lavoro e paghe, privati e famiglia, adempimenti e certificazioni) |
 | Chi siamo | Diptych invertito, ritratto reale |
 | Lo studio | Galleria a campiture disuguali |
 | Contatti | Diptych dati / mappa + esterno |
