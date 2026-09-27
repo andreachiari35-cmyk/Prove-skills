@@ -411,14 +411,14 @@
     </div>
 
     <div class="contact__media">
-      <!-- Mappa Google a due clic: l’iframe, e con lui i cookie di Google, arriva
-           solo quando il visitatore lo chiede. Le indicazioni funzionano sempre. -->
-      <figure class="map" data-map-src="https://www.google.com/maps?q=Via+della+Boffella+37,+25020+San+Paolo+BS&amp;z=16&amp;output=embed">
+      <!-- Mappa: si apre su Google Maps in una nuova scheda. La pagina non
+           incorpora niente da Google, quindi niente cookie di terze parti.
+           Quando arriva lo screenshot della zona, prende il posto del pannello. -->
+      <figure class="map">
         <div class="map__frame">
           <div class="map__consent">
             <p class="map__addr">Via della Boffella&nbsp;37<br>25020 San&nbsp;Paolo&nbsp;(BS)</p>
-            <button class="btn btn--line map__load" type="button">Mostra la mappa</button>
-            <p class="map__note">La mappa è fornita da Google, che può impostare cookie propri.</p>
+            <a class="btn btn--line" href="https://www.google.com/maps/search/?api=1&amp;query=Via+della+Boffella+37%2C+25020+San+Paolo+BS" target="_blank" rel="noopener">Apri in Google Maps</a>
           </div>
         </div>
         <figcaption class="map__meta">
@@ -468,19 +468,6 @@
       });
     });
   }
-
-  // Mappa a due clic: sostituisce il pannello con l’iframe di Google solo su richiesta.
-  document.querySelectorAll('[data-map-src]').forEach(function (fig) {
-    fig.querySelector('.map__load').addEventListener('click', function () {
-      var frame = document.createElement('iframe');
-      frame.className = 'map__iframe';
-      frame.src = fig.dataset.mapSrc;
-      frame.title = 'Mappa: Studio M.B. Srl, Via della Boffella 37, San Paolo (BS)';
-      frame.referrerPolicy = 'no-referrer-when-downgrade';
-      fig.querySelector('.map__frame').replaceChildren(frame);
-      frame.focus();
-    });
-  });
 </script>
 
 </body>

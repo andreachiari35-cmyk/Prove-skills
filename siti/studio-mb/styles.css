@@ -642,13 +642,12 @@ a { color: inherit; }
 }
 .shot__ratio { font-variant-numeric: tabular-nums; }
 
-/* ------------------------------------------------- mappa a due clic */
-/* Il pannello tiene le proporzioni dell’iframe che lo sostituirà; niente
+/* ------------------------------------------------------------ mappa */
+/* Il pannello tiene le proporzioni della mappa che lo sostituirà; niente
  * overflow nascosto, così su schermi stretti il testo allunga il riquadro
  * invece di essere tagliato. */
 .map { display: grid; gap: var(--space-xs); min-width: 0; }
 .map__frame {
-  position: relative;
   display: grid;
   min-width: 0;   /* senza, l’altezza del testo si trasferisce in larghezza via aspect-ratio */
   align-items: center;
@@ -669,8 +668,6 @@ a { color: inherit; }
   line-height: 1.3;
   color: var(--color-ink);
 }
-.map__note { font-size: var(--text-sm); color: var(--color-ink-2); }
-.map__iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .map__meta { font-size: var(--text-sm); }
 .map__link {
   color: var(--color-accent);
