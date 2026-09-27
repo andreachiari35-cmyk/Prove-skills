@@ -1,6 +1,6 @@
 # Studio M.B. Srl — San Paolo (BS)
 
-Sito dello Studio M.B. Srl (amministratore unico: Mario Monteverdi, Ragioniere).
+Sito dello Studio M.B. Srl (amministratore unico: Mario Monteverdi, tributarista).
 Statico: `index.html` + `tokens.css` + `styles.css`, nessun build.
 
 Artifact pubblicato: https://claude.ai/artifact/RwfSNP1vfvHfEgi8UC46nc
@@ -32,7 +32,6 @@ valori cromatici o tipografici inline.
 - **Foto**: 8 riquadri su 9 sono ancora brief per il fotografo. Solo
   `foto/ritratto-titolare.jpg` è reale.
 - **Logo**: il wordmark in `.rail__brand` e nel footer è testo provvisorio.
-- **Mappa**: segnaposto in `.contact__media`.
 - **Pagine legali**: Privacy e Cookie nel footer puntano a `href="#"`.
 - **TASI**: il servizio 08 si chiama "IMU e TASI" come nel documento dello
   studio, ma la TASI è stata abolita nel 2020 (assorbita nell'IMU). Da

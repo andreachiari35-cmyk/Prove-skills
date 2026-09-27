@@ -315,7 +315,7 @@
     <div class="about__text">
       <h2 class="about__title">Chi siamo</h2>
       <p class="about__lede">
-        <strong>Mario Monteverdi</strong>, Ragioniere, è amministratore unico
+        <strong>Mario Monteverdi</strong>, tributarista, è amministratore unico
         dello Studio M.B. Srl dal 2005.
       </p>
       <p class="about__body">
@@ -412,13 +412,19 @@
     </div>
 
     <div class="contact__media">
-      <!-- SEGNAPOSTO MAPPA: qui andrà la mappa interattiva o un’immagine statica. -->
-      <figure class="shot shot--map">
-        <div class="shot__frame">
-          <p class="shot__name">Mappa</p>
-          <p class="shot__brief">Segnaposto: mappa con l’indirizzo dello studio e il pulsante “indicazioni stradali”.</p>
+      <!-- Mappa Google a due clic: l’iframe, e con lui i cookie di Google, arriva
+           solo quando il visitatore lo chiede. Le indicazioni funzionano sempre. -->
+      <figure class="map" data-map-src="https://www.google.com/maps?q=Via+della+Boffella+37,+25020+San+Paolo+BS&amp;z=16&amp;output=embed">
+        <div class="map__frame">
+          <div class="map__consent">
+            <p class="map__addr">Via della Boffella&nbsp;37<br>25020 San&nbsp;Paolo&nbsp;(BS)</p>
+            <button class="btn btn--line map__load" type="button">Mostra la mappa</button>
+            <p class="map__note">La mappa è fornita da Google, che può impostare cookie propri.</p>
+          </div>
         </div>
-        <figcaption class="shot__meta"><span>Segnaposto</span><span class="shot__ratio">16 : 9</span></figcaption>
+        <figcaption class="map__meta">
+          <a class="map__link" href="https://www.google.com/maps/dir/?api=1&amp;destination=Via+della+Boffella+37%2C+25020+San+Paolo+BS" target="_blank" rel="noopener">Indicazioni stradali</a>
+        </figcaption>
       </figure>
 
       <!-- TODO fotografo — sostituire con lo scatto reale. Dimensione consigliata: 2400×1600 px -->
@@ -448,6 +454,21 @@
     <a class="foot__link" href="#">Cookie</a>
   </p>
 </footer>
+
+<script>
+  // Mappa a due clic: sostituisce il pannello con l’iframe di Google solo su richiesta.
+  document.querySelectorAll('[data-map-src]').forEach(function (fig) {
+    fig.querySelector('.map__load').addEventListener('click', function () {
+      var frame = document.createElement('iframe');
+      frame.className = 'map__iframe';
+      frame.src = fig.dataset.mapSrc;
+      frame.title = 'Mappa: Studio M.B. Srl, Via della Boffella 37, San Paolo (BS)';
+      frame.referrerPolicy = 'no-referrer-when-downgrade';
+      fig.querySelector('.map__frame').replaceChildren(frame);
+      frame.focus();
+    });
+  });
+</script>
 
 </body>
 </html>
