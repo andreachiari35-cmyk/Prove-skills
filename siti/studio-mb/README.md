@@ -24,10 +24,16 @@ valori cromatici o tipografici inline.
 
 ## Da completare
 
-- **Dati dello studio**: `[INDIRIZZO]`, `[TELEFONO]`, `[EMAIL]`, `[ORARI]`, `[P.IVA]`
+- **Email**: `[EMAIL]` nei contatti. Indirizzo, telefono, orari e P.IVA/C.F.
+  sono inseriti.
+- **Prenota un appuntamento**: i due bottoni puntano ancora a `href="#"`. Serve
+  un canale (email, modulo o servizio di prenotazione). I bottoni "Chiama"
+  chiamano già lo 030 997 0261.
 - **Foto**: 8 riquadri su 9 sono ancora brief per il fotografo. Solo
   `foto/ritratto-titolare.jpg` è reale.
 - **Logo**: il wordmark in `.rail__brand` e nel footer è testo provvisorio.
 - **Mappa**: segnaposto in `.contact__media`.
-- **Link**: i bottoni "Chiama" e "Prenota un appuntamento" puntano a `href="#"`.
 - **Pagine legali**: Privacy e Cookie nel footer puntano a `href="#"`.
+- **TASI**: il servizio 08 si chiama "IMU e TASI" come nel documento dello
+  studio, ma la TASI è stata abolita nel 2020 (assorbita nell'IMU). Da
+  confermare con il cliente.
