@@ -24,11 +24,9 @@ valori cromatici o tipografici inline.
 
 ## Da completare
 
-- **Email**: `[EMAIL]` nei contatti. Indirizzo, telefono, orari e P.IVA/C.F.
-  sono inseriti.
 - **Prenota un appuntamento**: i due bottoni puntano ancora a `href="#"`. Serve
-  un canale (email, modulo o servizio di prenotazione). I bottoni "Chiama"
-  chiamano già lo 030 997 0261.
+  un canale (modulo o servizio di prenotazione). I bottoni "Chiama" chiamano lo
+  030 997 0261 da telefono e mostrano il numero da computer.
 - **Foto**: 8 riquadri su 9 sono ancora brief per il fotografo. Solo
   `foto/ritratto-titolare.jpg` è reale.
 - **Logo**: il wordmark in `.rail__brand` e nel footer è testo provvisorio.

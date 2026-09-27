@@ -35,7 +35,7 @@
   </nav>
 
   <div class="rail__action">
-    <a class="btn btn--line" href="tel:+390309970261" aria-label="Chiama lo studio: 030 997 0261">Chiama</a>
+    <a class="btn btn--line" href="tel:+390309970261" data-number="030 997 0261" aria-label="Chiama lo studio: 030 997 0261">Chiama</a>
   </div>
 </header>
 
@@ -51,7 +51,7 @@
       </p>
       <p class="opening__actions" style="--i: 2">
         <a class="btn btn--fill" href="#">Prenota un appuntamento</a>
-        <a class="btn btn--line" href="tel:+390309970261" aria-label="Chiama lo studio: 030 997 0261">Chiama</a>
+        <a class="btn btn--line" href="tel:+390309970261" data-number="030 997 0261" aria-label="Chiama lo studio: 030 997 0261">Chiama</a>
       </p>
     </div>
 
@@ -400,14 +400,13 @@
       <dl class="contact__list">
         <div class="contact__item"><dt>Indirizzo</dt><dd>Via della Boffella&nbsp;37<br>25020 San&nbsp;Paolo&nbsp;(BS)</dd></div>
         <div class="contact__item"><dt>Telefono</dt><dd><a href="tel:+390309970261">030 997 0261</a></dd></div>
-        <div class="contact__item"><dt>Email</dt><dd>[EMAIL]</dd></div>
         <div class="contact__item"><dt>Orari</dt><dd>Lunedì – venerdì<br>8:30–12:00<br>14:00–18:30<br>Sabato e domenica: chiuso</dd></div>
       </dl>
 
       <p class="plate"><span class="plate__line">Per un primo appuntamento in studio.</span></p>
       <p class="contact__actions">
         <a class="btn btn--fill" href="#">Prenota un appuntamento</a>
-        <a class="btn btn--line" href="tel:+390309970261" aria-label="Chiama lo studio: 030 997 0261">Chiama</a>
+        <a class="btn btn--line" href="tel:+390309970261" data-number="030 997 0261" aria-label="Chiama lo studio: 030 997 0261">Chiama</a>
       </p>
     </div>
 
@@ -456,6 +455,20 @@
 </footer>
 
 <script>
+  // Su computer non c’è un telefono da aprire: i link tel: non compongono, e i
+  // bottoni "Chiama" mostrano il numero al posto della scritta.
+  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    document.querySelectorAll('a[href^="tel:"]').forEach(function (link) {
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+        if (link.dataset.number && !link.classList.contains('is-revealed')) {
+          link.textContent = link.dataset.number;
+          link.classList.add('is-revealed');
+        }
+      });
+    });
+  }
+
   // Mappa a due clic: sostituisce il pannello con l’iframe di Google solo su richiesta.
   document.querySelectorAll('[data-map-src]').forEach(function (fig) {
     fig.querySelector('.map__load').addEventListener('click', function () {

@@ -125,6 +125,13 @@ a { color: inherit; }
   .btn--line:hover  { background: var(--color-ink); color: var(--color-paper); }
 }
 .btn:active { transform: translateY(1px); }
+/* Su computer "Chiama" diventa il numero: da leggere o copiare, non più da cliccare. */
+.btn.is-revealed {
+  cursor: text;
+  user-select: all;
+  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
+}
 .btn[aria-disabled="true"] {
   opacity: 0.55;
   cursor: not-allowed;
